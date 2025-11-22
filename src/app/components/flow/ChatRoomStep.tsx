@@ -14,6 +14,7 @@ type ChatRoomStepProps = {
   onSendMessage: () => void;
   onSendFileMessage: (file: File) => void;
   onLeaveRoom: () => void;
+  onLogout: () => void;
 };
 
 export default function ChatRoomStep({
@@ -26,6 +27,7 @@ export default function ChatRoomStep({
   onSendMessage,
   onSendFileMessage,
   onLeaveRoom,
+  onLogout,
 }: ChatRoomStepProps) {
   return (
     <main className="flex h-[100svh] items-center justify-center px-4">
@@ -57,8 +59,15 @@ export default function ChatRoomStep({
                 onClick={onLeaveRoom}
                 className="rounded bg-neutral-700/80 hover:bg-neutral-600 px-3 py-1 text-xs font-medium text-neutral-100 transition-colors"
               >
-                나가기
+                방 나가기
               </button>
+              {/* <button
+                type="button"
+                onClick={onLogout}
+                className="rounded bg-rose-900/50 hover:bg-rose-900/80 border border-rose-800/50 px-3 py-1 text-xs font-medium text-rose-200 transition-colors"
+              >
+                로그아웃
+              </button> */}
             </div>
           </div>
         </header>
